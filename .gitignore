@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+*.bin
+*.npy
+datasets/sv_300d.tsv
