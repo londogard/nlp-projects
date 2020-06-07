@@ -131,3 +131,4 @@ dmypy.json
 # Dennis ignores
 python/.idea
 python/generateStockData/data/*
+python/createModels/__pycache__/*

@@ -15,6 +15,6 @@ def generateData(stocks, start_date, end_date):
 
 
 if __name__ == "__main__":
-    start_date = "2020-03-01"
+    start_date = "2019-01-01"
     end_date = "2020-05-31"
     generateData(["INVE-B.ST", "EVO.ST"], start_date, end_date)
