@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Dennis ignores
+python/.idea
+python/generateStockData/data/*
