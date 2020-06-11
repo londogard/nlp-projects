@@ -1,8 +1,8 @@
+import numpy as np
+
 def splitData(X, Y, amount):
-    X_train =  X[:round(len(X)*amount)]
-    X_test =  X[round(len(X)*amount):]
-    Y_train =  Y[:round(len(Y)*amount)]
-    Y_test =  Y[round(len(Y)*amount):]
+    X_train, X_test = np.split(X, [int(amount*len(X))])
+    Y_train, Y_test = np.split(Y, [int(amount*len(Y))])
     return X_train, X_test, Y_train, Y_test
 
 def printResults(pred, Y_test, X_test):
@@ -13,6 +13,6 @@ def printResults(pred, Y_test, X_test):
         print("-----------------------------")
     
 def createHistoryData(X, Y, days):
-    X = [[X[j] for j in range(i, i+days)] for i in range(0, len(X)-days)]
+    X = [X[i:i+days] for i in range(0, len(X)-days)]
     Y = Y[days:]
     return X, Y
