@@ -11,7 +11,7 @@ dataset_path = '/home/londet/git/nlp-projects/datasets/swedish_tweet_combined.cs
 dataset = pd.read_csv(dataset_path)
 
 random_state = 42
-test_size = 0.3
+test_size = 0.15
 
 X = dataset['raw'].tolist()
 y = [f'__label__{x}' for x in dataset['y'].tolist()]
@@ -23,8 +23,12 @@ open('text.in', 'w').write('\n'.join([f'{y} {x}' for x,y in zip(X_train,y_train)
 open('text.valid', 'w').write('\n'.join([f'{y} {x}' for x,y in zip(X_test,y_test)]))
 
 # model = fasttext.load_model('/home/londet/git/nlp-projects/models/cc.sv.100.bin')
-model = fasttext.train_supervised(input='text.in',lr=1.0, epoch=25, wordNgrams=2)
+model = fasttext.train_supervised(input='text.in', autotuneValidationFile='text.valid')
 # model.save_model
 print(model.test('text.valid'))
+print(model.__dict__)
+#print(model.test('text.valid'))
 
 # 0.622
+# autoTune gives 0.637
+# autoTune deluxe (validation=0.15) gives 0.652!!
