@@ -47,7 +47,8 @@ image = cv2.resize(image, (newW, newH))
 # second can be used to derive the bounding box coordinates of text
 layerNames = [
 	"feature_fusion/Conv_7/Sigmoid",
-	"feature_fusion/concat_3"]
+	"feature_fusion/concat_3"
+	]
 
 # load the pre-trained EAST text detector
 print("[INFO] loading EAST text detector...")

@@ -147,6 +147,4 @@ many of them as head of the company's corporate communications. The opinions exp
 end our isolation. Now that the world is beginning to reopen prematurely amid rising infection numbers,
 I have been thinking especially of those of us in our 60s and older. While the Covid-19 virus attacks all ages,
 we are among those at greatest risk.
-
-
 """
