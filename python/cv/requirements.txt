@@ -6,4 +6,4 @@ pytesseract==0.3.4
 py-notifier==0.1.0
 win10toast==0.9; platform_system == "Windows"
 imutils==0.5.3
-numpy==1.18.5
+numpy==1.21.0
